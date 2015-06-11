@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CityWeather.h"
 
 @interface DetailViewController : UIViewController
+
+@property (nonatomic, strong) CityWeather *cityWeather;
+@property (nonatomic, weak) IBOutlet UIImageView *weatherIconImageView;
 
 @end

@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DailyWeatherControllerViewController : UIViewController
+@interface DailyWeatherCollectionViewController : UICollectionViewController
 
 @end

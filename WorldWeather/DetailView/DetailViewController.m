@@ -15,8 +15,12 @@
 @implementation DetailViewController
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view.
+  [super viewDidLoad];
+  // Do any additional setup after loading the view.
+  [self configureView];
+  [self provideDataToChildViewControllers];
+  self.navigationItem.leftItemsSupplementBackButton = true;
+  self.navigationItem.hidesBackButton = false;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,14 +28,22 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark - Utitlity Methods
+- (void)configureView {
+  if (self.cityWeather) {
+    DailyWeather *todaysWeather = self.cityWeather.weather.firstObject;
+    WeatherStatus *todaysStatus = todaysWeather.status;
+    self.title = self.cityWeather.name;
+    self.weatherIconImageView.image = todaysStatus.statusImage;
+  }
 }
-*/
+
+- (void)provideDataToChildViewControllers {
+  for (UIViewController *vc in self.childViewControllers) {
+    if ([vc respondsToSelector:@selector(setCityWeather:)]) {
+      [((id)vc) setCityWeather:self.cityWeather];
+    }
+  }
+}
 
 @end
