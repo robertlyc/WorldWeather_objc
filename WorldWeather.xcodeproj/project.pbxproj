@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E1328BF01B2972AE004FA090 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1328BEF1B2972AE004FA090 /* DetailViewController.m */; };
+		E1328BF31B297306004FA090 /* DailyWeatherControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1328BF21B297306004FA090 /* DailyWeatherControllerViewController.m */; };
+		E1328BF61B2978DA004FA090 /* DailyWeatherCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E1328BF51B2978DA004FA090 /* DailyWeatherCollectionViewCell.m */; };
+		E1328BF91B297905004FA090 /* WeatherTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1328BF81B297905004FA090 /* WeatherTextViewController.m */; };
+		E1328BFC1B2979CE004FA090 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1328BFB1B2979CE004FA090 /* MasterViewController.m */; };
 		E1EBACB31B283898004A4CE5 /* WeatherData.plist in Resources */ = {isa = PBXBuildFile; fileRef = E1EBACB21B283898004A4CE5 /* WeatherData.plist */; };
 		E1EBACB61B283954004A4CE5 /* DailyWeather.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EBACB51B283954004A4CE5 /* DailyWeather.m */; };
 		E1EBACB91B28398B004A4CE5 /* WeatherStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EBACB81B28398B004A4CE5 /* WeatherStatus.m */; };
@@ -32,6 +37,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E1328BEE1B2972AE004FA090 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		E1328BEF1B2972AE004FA090 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		E1328BF11B297306004FA090 /* DailyWeatherControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DailyWeatherControllerViewController.h; sourceTree = "<group>"; };
+		E1328BF21B297306004FA090 /* DailyWeatherControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DailyWeatherControllerViewController.m; sourceTree = "<group>"; };
+		E1328BF41B2978DA004FA090 /* DailyWeatherCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DailyWeatherCollectionViewCell.h; sourceTree = "<group>"; };
+		E1328BF51B2978DA004FA090 /* DailyWeatherCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DailyWeatherCollectionViewCell.m; sourceTree = "<group>"; };
+		E1328BF71B297905004FA090 /* WeatherTextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherTextViewController.h; sourceTree = "<group>"; };
+		E1328BF81B297905004FA090 /* WeatherTextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherTextViewController.m; sourceTree = "<group>"; };
+		E1328BFA1B2979CE004FA090 /* MasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		E1328BFB1B2979CE004FA090 /* MasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
 		E1EBACB21B283898004A4CE5 /* WeatherData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = WeatherData.plist; sourceTree = "<group>"; };
 		E1EBACB41B283954004A4CE5 /* DailyWeather.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DailyWeather.h; sourceTree = "<group>"; };
 		E1EBACB51B283954004A4CE5 /* DailyWeather.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DailyWeather.m; sourceTree = "<group>"; };
@@ -74,6 +89,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E1328BEC1B296EC7004FA090 /* MasterView */ = {
+			isa = PBXGroup;
+			children = (
+				E1328BFA1B2979CE004FA090 /* MasterViewController.h */,
+				E1328BFB1B2979CE004FA090 /* MasterViewController.m */,
+			);
+			path = MasterView;
+			sourceTree = "<group>";
+		};
+		E1328BED1B296EC7004FA090 /* DetailView */ = {
+			isa = PBXGroup;
+			children = (
+				E1328BEE1B2972AE004FA090 /* DetailViewController.h */,
+				E1328BEF1B2972AE004FA090 /* DetailViewController.m */,
+				E1328BF11B297306004FA090 /* DailyWeatherControllerViewController.h */,
+				E1328BF21B297306004FA090 /* DailyWeatherControllerViewController.m */,
+				E1328BF41B2978DA004FA090 /* DailyWeatherCollectionViewCell.h */,
+				E1328BF51B2978DA004FA090 /* DailyWeatherCollectionViewCell.m */,
+				E1328BF71B297905004FA090 /* WeatherTextViewController.h */,
+				E1328BF81B297905004FA090 /* WeatherTextViewController.m */,
+			);
+			path = DetailView;
+			sourceTree = "<group>";
+		};
 		E1EBACB11B283898004A4CE5 /* DataLayer */ = {
 			isa = PBXGroup;
 			children = (
@@ -111,8 +150,10 @@
 		E1F21E4D1B0B1230009288E6 /* WorldWeather */ = {
 			isa = PBXGroup;
 			children = (
-				E1F21E521B0B1230009288E6 /* AppDelegate.h */,
+				E1328BEC1B296EC7004FA090 /* MasterView */,
+				E1328BED1B296EC7004FA090 /* DetailView */,
 				E1EBACB11B283898004A4CE5 /* DataLayer */,
+				E1F21E521B0B1230009288E6 /* AppDelegate.h */,
 				E1F21E531B0B1230009288E6 /* AppDelegate.m */,
 				E1F21E551B0B1230009288E6 /* ViewController.h */,
 				E1F21E561B0B1230009288E6 /* ViewController.m */,
@@ -252,11 +293,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				E1EBACB61B283954004A4CE5 /* DailyWeather.m in Sources */,
+				E1328BF31B297306004FA090 /* DailyWeatherControllerViewController.m in Sources */,
 				E1EBACBC1B283A81004A4CE5 /* CityWeather.m in Sources */,
 				E1EBACB91B28398B004A4CE5 /* WeatherStatus.m in Sources */,
+				E1328BFC1B2979CE004FA090 /* MasterViewController.m in Sources */,
+				E1328BF01B2972AE004FA090 /* DetailViewController.m in Sources */,
 				E1F21E571B0B1230009288E6 /* ViewController.m in Sources */,
 				E1F21E541B0B1230009288E6 /* AppDelegate.m in Sources */,
+				E1328BF91B297905004FA090 /* WeatherTextViewController.m in Sources */,
 				E1EBACBF1B283A9D004A4CE5 /* WeatherData.m in Sources */,
+				E1328BF61B2978DA004FA090 /* DailyWeatherCollectionViewCell.m in Sources */,
 				E1F21E511B0B1230009288E6 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
