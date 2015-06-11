@@ -19,7 +19,6 @@
 		E1EBACBF1B283A9D004A4CE5 /* WeatherData.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EBACBE1B283A9D004A4CE5 /* WeatherData.m */; };
 		E1F21E511B0B1230009288E6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E1F21E501B0B1230009288E6 /* main.m */; };
 		E1F21E541B0B1230009288E6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E1F21E531B0B1230009288E6 /* AppDelegate.m */; };
-		E1F21E571B0B1230009288E6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E1F21E561B0B1230009288E6 /* ViewController.m */; };
 		E1F21E5A1B0B1230009288E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1F21E581B0B1230009288E6 /* Main.storyboard */; };
 		E1F21E5C1B0B1230009288E6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E1F21E5B1B0B1230009288E6 /* Images.xcassets */; };
 		E1F21E5F1B0B1230009288E6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1F21E5D1B0B1230009288E6 /* LaunchScreen.xib */; };
@@ -61,8 +60,6 @@
 		E1F21E501B0B1230009288E6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E1F21E521B0B1230009288E6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		E1F21E531B0B1230009288E6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		E1F21E551B0B1230009288E6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		E1F21E561B0B1230009288E6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		E1F21E591B0B1230009288E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E1F21E5B1B0B1230009288E6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E1F21E5E1B0B1230009288E6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -155,8 +152,6 @@
 				E1EBACB11B283898004A4CE5 /* DataLayer */,
 				E1F21E521B0B1230009288E6 /* AppDelegate.h */,
 				E1F21E531B0B1230009288E6 /* AppDelegate.m */,
-				E1F21E551B0B1230009288E6 /* ViewController.h */,
-				E1F21E561B0B1230009288E6 /* ViewController.m */,
 				E1F21E581B0B1230009288E6 /* Main.storyboard */,
 				E1F21E5B1B0B1230009288E6 /* Images.xcassets */,
 				E1F21E5D1B0B1230009288E6 /* LaunchScreen.xib */,
@@ -298,7 +293,6 @@
 				E1EBACB91B28398B004A4CE5 /* WeatherStatus.m in Sources */,
 				E1328BFC1B2979CE004FA090 /* MasterViewController.m in Sources */,
 				E1328BF01B2972AE004FA090 /* DetailViewController.m in Sources */,
-				E1F21E571B0B1230009288E6 /* ViewController.m in Sources */,
 				E1F21E541B0B1230009288E6 /* AppDelegate.m in Sources */,
 				E1328BF91B297905004FA090 /* WeatherTextViewController.m in Sources */,
 				E1EBACBF1B283A9D004A4CE5 /* WeatherData.m in Sources */,

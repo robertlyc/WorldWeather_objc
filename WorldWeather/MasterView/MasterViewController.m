@@ -7,8 +7,13 @@
 //
 
 #import "MasterViewController.h"
+#import "DetailViewController.h"
+#import "CityWeather.h"
+#import "WeatherData.h"
 
 @interface MasterViewController ()
+
+@property WeatherData *weatherData;
 
 @end
 
@@ -30,17 +35,12 @@
 }
 
 #pragma mark - Table view data source
-
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+  return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+  return self.weatherData.cities.count;
 }
 
 /*
@@ -87,14 +87,18 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+  if ([segue.identifier isEqualToString:@"showDetail"]) {
+    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    CityWeather *cityWeather = self.weatherData.cities[indexPath.row];
+    DetailViewController *controller = (DetailViewController *)[[segue destinationViewController] topViewController];
+    controller.cityWeather = cityWeather;
+    controller.navigationItem.leftBarButtonItem = self.splitViewController.displayModeButtonItem;
+  }
 }
-*/
+
 
 @end
