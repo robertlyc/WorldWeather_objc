@@ -11,4 +11,11 @@
 
 @interface DailyWeather : NSObject
 
+@property (nonatomic, strong, readonly) NSDate *date;
+@property (nonatomic, strong, readonly) WeatherStatus *status;
+@property (nonatomic, strong, readonly) NSString *dayName;
+
+- (instancetype)initWithDate:(NSDate *)date status:(WeatherStatus *)status;
++ (instancetype)dailyWeatherWithDate:(NSDate *)date status:(WeatherStatus *)status;
+
 @end
