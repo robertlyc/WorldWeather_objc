@@ -19,14 +19,20 @@
 
 @implementation MasterViewController
 
+- (void)awakeFromNib {
+  [super awakeFromNib];
+  if (!self.weatherData) {
+    self.weatherData = [WeatherData loadFromDefaultPList];
+  }
+  [self prepareNavigationBarAppearance];
+}
+
 - (void)viewDidLoad {
-    [super viewDidLoad];
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+  [super viewDidLoad];
+  
+  self.detailViewController = (DetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
+  self.detailViewController.cityWeather = self.weatherData.cities[0];
+  self.title = @"Cities";
 }
 
 - (void)didReceiveMemoryWarning {
@@ -43,15 +49,16 @@
   return self.weatherData.cities.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
-    return cell;
+  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CityCell" forIndexPath:indexPath];
+  
+  CityWeather *cityWeather = self.weatherData.cities[indexPath.row];
+  cell.textLabel.text = cityWeather.name;
+  
+  return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
@@ -100,5 +107,12 @@
   }
 }
 
+#pragma mark - Utility methods
+- (void)prepareNavigationBarAppearance {
+  if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+    self.clearsSelectionOnViewWillAppear = false;
+    self.preferredContentSize = CGSizeMake(320.0, 600.0);
+  }
+}
 
 @end
