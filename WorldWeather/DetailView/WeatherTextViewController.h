@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+@class CityWeather;
 
 @interface WeatherTextViewController : UIViewController
+
+@property (nonatomic, strong) CityWeather *cityWeather;
+@property (nonatomic, weak) IBOutlet UILabel *cityNameLabel;
+@property (nonatomic, weak) IBOutlet UILabel *temperatureLabel;
 
 @end

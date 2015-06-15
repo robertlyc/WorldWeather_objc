@@ -271,6 +271,10 @@
                         </constraints>
                     </view>
                     <toolbarItems/>
+                    <connections>
+                        <outlet property="cityNameLabel" destination="3qD-GL-mMO" id="ldK-A8-VhJ"/>
+                        <outlet property="temperatureLabel" destination="EfD-G2-wdk" id="HAQ-kF-iUq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ycT-Q4-t29" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
