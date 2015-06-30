@@ -7,17 +7,31 @@
 //
 
 #import "AppDelegate.h"
+#import "DetailViewController.h"
 
-@interface AppDelegate ()
+@interface AppDelegate () <UISplitViewControllerDelegate>
 
 @end
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   // Override point for customization after application launch.
+  UISplitViewController *splitViewController = (UISplitViewController *)self.window.rootViewController;
+  UINavigationController *navigationController = [splitViewController.viewControllers lastObject];
+  navigationController.topViewController.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem;
+  splitViewController.delegate = self;
   return YES;
+}
+
+#pragma mark - Split View
+
+- (BOOL)splitViewController:(UISplitViewController *)splitViewController collapseSecondaryViewController:(UIViewController *)secondaryViewController ontoPrimaryViewController:(UIViewController *) primaryViewController {
+  if ([secondaryViewController isKindOfClass:[UINavigationController class]] && [[(UINavigationController *)secondaryViewController topViewController] isKindOfClass:[DetailViewController class]] && ([(DetailViewController *)[(UINavigationController *)secondaryViewController topViewController] cityWeather] == nil)) {
+    return YES;
+  } else {
+    return NO;
+  }
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

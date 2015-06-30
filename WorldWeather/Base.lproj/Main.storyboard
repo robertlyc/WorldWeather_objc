@@ -214,7 +214,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RUs-y9-HSS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1976" y="951"/>
+            <point key="canvasLocation" x="1931" y="2141"/>
         </scene>
         <!--Weather Text View-->
         <scene sceneID="J2b-Cc-zjn">
