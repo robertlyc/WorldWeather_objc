@@ -19,7 +19,7 @@
 
 - (instancetype)initWithPListedNamed:(NSString *)plistName {
   if (self = [super init]) {
-    
+    self.cities = [self loadWeatherDataFromPListedNamed:plistName];
   }
   return self;
 }
