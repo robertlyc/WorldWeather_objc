@@ -23,6 +23,15 @@
   self.navigationItem.hidesBackButton = false;
 }
 
+- (void)setCityWeather:(CityWeather *)cityWeather {
+  if (cityWeather != _cityWeather) {
+    _cityWeather = cityWeather;
+    if (self.view) {
+      [self configureView];
+    }
+  }
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
