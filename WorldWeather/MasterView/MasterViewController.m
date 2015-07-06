@@ -63,7 +63,7 @@
 #pragma mark - Navigation
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-  if ([segue.identifier isEqualToString:@"showDetail"]) {
+  if ([[segue identifier] isEqualToString:@"showDetail"]) {
     NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
     CityWeather *cityWeather = self.weatherData.cities[indexPath.row];
     DetailViewController *controller = (DetailViewController *)[[segue destinationViewController] topViewController];
